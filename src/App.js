@@ -4,36 +4,34 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/aboutMe';
+import Main from './Main';
 import { Link } from 'react-router-dom';
+
+
+const boj = "https://www.acmicpc.net/user/ramzxc";
+const github = "https://github.com/ramzxc";
+const solved = "https://solved.ac/profile/ramzxc";
 
 function App() {
     return (
         <BrowserRouter>
             <div className="App">
-                <header className="header"> 
-                    <div className="ramzxc"><Link exact to="/" >ramzxc</Link></div>
-                    <ul class="nav-list">
-                        <li className="categories">
-                            <Link exact to="/categories">categories</Link>
-                        </li>
-                        <li className="aboutMe">
-                            <Link exact to="/aboutMe">about me</Link>
-                        </li>
-                        <li className="search">
-                            <input 
-                            type="search" 
-                            placeholder="search"
-                            className="searchButton"
-                            size={5}
-                            />
-                        </li>
-                    </ul>
-                </header>
-                <div className="main"/>
+				<header className='header'>
+					<div className="ramzxc">
+						<a className='star'>*</a>
+						{/* <img className='logo' alt='logo' src='img/logo.png'/> */}
+						<Link exact to="/" >ramzxc</Link>
+					</div>
+				</header>
+				<nav>
+					<ul className='nav'>
+						<li className='navItem'><div onClick={()=>{window.open(boj)}}>BOJ</div></li>
+						<li className='navItem'><div onClick={()=>{window.open(solved)}}>solved.ac</div></li>
+						<li className='navItem'><div onClick={()=>{window.open(github)}}>Github</div></li>
+					</ul>
+				</nav>
                 <Routes>
-                    <Route path="/" element={<Home />}/>
+                    <Route path="/" element={<Main />}/>
                 </Routes>
             </div>
         </BrowserRouter>
