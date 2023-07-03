@@ -84,8 +84,17 @@ body {
 	padding-bottom: 0;
 }
 
+.sidebar {
+	float: right;
+}
+
 div {
     box-sizing: border-box;
+}
+
+section {
+	display: flex;
+	height: 500px;
 }
 
 

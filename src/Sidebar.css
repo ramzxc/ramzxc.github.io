@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'nav';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sidebar {
+	font-family: 'nav';
+	margin-right: 5%;
+	margin-left: auto;
+	width: 22%;
+}
+
+.divider {
+	border-bottom: 2px solid black;
+	width: 100%;
+	float: right;
+	margin-top: 40%;
+	font-weight: bold;
+}
+
+#search {
+	margin-top: 40px;
+}
+
+.contents {
+	height: auto;
+	width: 100%;
+	float: right;
+	font-weight: lighter;
+	border-bottom: 2px solid black;
+}

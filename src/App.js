@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Main from './Main';
 import { Link } from 'react-router-dom';
+import Sidebar from './Sidebar';
 
 
 const boj = "https://www.acmicpc.net/user/ramzxc";
@@ -30,9 +31,14 @@ function App() {
 						<li className='navItem'><div onClick={()=>{window.open(github)}}>Github</div></li>
 					</ul>
 				</nav>
-                <Routes>
-                    <Route path="/" element={<Main />}/>
-                </Routes>
+				<section>
+					<Routes>
+						<Route path="/" element={<Main />}/>
+					</Routes>
+					<Routes>
+						<Route path="/" element={<Sidebar />}/>
+					</Routes>
+				</section>
             </div>
         </BrowserRouter>
     );
