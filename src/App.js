@@ -1,6 +1,5 @@
 /* eslint-disable */
 
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -13,10 +12,10 @@ import Codeforces from './categories/ps/Codeforces';
 import Contests from './categories/ps/Contests';
 import Game from './categories/programming/Game';
 import Web from './categories/programming/Web';
-import NS from 'categories/games/NS';
-import Steam from 'categories/games/Steam';
-import Chess from 'categories/games/Chess';
-import Cybersecurity from 'categories/cybersecurity/Cybersecurity';
+import NS from './categories/games/NS';
+import Steam from './categories/games/Steam';
+import Chess from './categories/games/Chess';
+import Cybersecurity from './categories/cybersecurity/Cybersecurity';
 
 
 const boj = "https://www.acmicpc.net/user/ramzxc";
@@ -46,7 +45,14 @@ function App() {
 						<Route path="/" element={<Main />}/>
 						<Route path="/ps/algorithms" element={<Algorithms />}/>
 						<Route path='/ps/boj' element={<BOJ />}/>
+						<Route path='/ps/codeforces' element={<Codeforces />}/>
+						<Route path='/ps/contests' element={<Contests />}/>
+						<Route path='/cybersecurity' element={<Cybersecurity />}/>
 						<Route path="/programming/web" element={<Web />}/>
+						<Route path='/programming/game' element={<Game />}/>
+						<Route path='/games/chess' element={<Chess />}/>
+						<Route path='/games/steam' element={<Steam />}/>
+						<Route path='/games/ns' element={<NS />}/>
 					</Routes>
 					<Routes>
 						<Route path="/" element={<Sidebar />}/>
