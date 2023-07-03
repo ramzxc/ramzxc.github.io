@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'nav';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+body {
+	margin: 0 auto;
+	width: 90%;
+}
+
+section {
+	display: flex;
+	height: 500px;
+}
+
+.category {
+	margin-top: 0;
+	font-size: 25px;
+}
+
+.title {
+	font-size: 30px;
+	font-weight: lighter;
+	font-family: 'title';
+	border-bottom: 2px solid black;
+	margin-top: 100px;
+	padding-bottom: 10px;
+	margin-bottom: 40px;
+}
+
+#intro {
+	font-size: 30px;
+	font-weight: bold;
+	margin: 0;
+}
+
+.content {
+	width: 60%;
+	margin-left: 5%;
+    text-align: left;
+    position: relative;
+    top: 50px;
+    padding-left: 10px;
+    font-family: 'nav';
+	color: black;
+	z-index: 100;
+	font-size: 18px;
+}
+
+.f {
+	border-top: 2px solid black;
+}
+
+.date {
+	font-size: 15px;
+	float: right;
+	color: rgb(107, 107, 107);
+}

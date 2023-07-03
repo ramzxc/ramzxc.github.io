@@ -7,6 +7,16 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Main from './Main';
 import { Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
+import Algorithms from './categories/ps/Algorithms';
+import BOJ from './categories/ps/BOJ';
+import Codeforces from './categories/ps/Codeforces';
+import Contests from './categories/ps/Contests';
+import Game from './categories/programming/Game';
+import Web from './categories/programming/Web';
+import NS from 'categories/games/NS';
+import Steam from 'categories/games/Steam';
+import Chess from 'categories/games/Chess';
+import Cybersecurity from 'categories/cybersecurity/Cybersecurity';
 
 
 const boj = "https://www.acmicpc.net/user/ramzxc";
@@ -26,32 +36,38 @@ function App() {
 				</header>
 				<nav>
 					<ul className='nav'>
-						<li className='navItem'><div onClick={()=>{window.open(boj)}}>BOJ</div></li>
-						<li className='navItem'><div onClick={()=>{window.open(solved)}}>solved.ac</div></li>
-						<li className='navItem'><div onClick={()=>{window.open(github)}}>Github</div></li>
+						<li className='navItem'><a href={boj}>BOJ</a></li>
+						<li className='navItem'><a href={solved}>solved.ac</a></li>
+						<li className='navItem'><a href={github}>Github</a></li>
 					</ul>
 				</nav>
 				<section>
 					<Routes>
 						<Route path="/" element={<Main />}/>
+						<Route path="/ps/algorithms" element={<Algorithms />}/>
+						<Route path='/ps/boj' element={<BOJ />}/>
+						<Route path="/programming/web" element={<Web />}/>
 					</Routes>
 					<Routes>
 						<Route path="/" element={<Sidebar />}/>
+						<Route path="/ps/algorithms" element={<Sidebar />}/>
+						<Route path="/ps/boj" element={<Sidebar />}/>
+						<Route path="/ps/codeforces" element={<Sidebar />}/>
+						<Route path="/ps/contests" element={<Sidebar />}/>
+						<Route path="/cybersecurity" element={<Sidebar />}/>
+						<Route path="/programming/web" element={<Sidebar />}/>
+						<Route path="/programming/game" element={<Sidebar />}/>
+						<Route path="/games/chess" element={<Sidebar />}/>
+						<Route path="/games/steam" element={<Sidebar />}/>
+						<Route path="/games/ns" element={<Sidebar />}/>
 					</Routes>
 				</section>
+				<Routes>
+				</Routes>
             </div>
         </BrowserRouter>
     );
 }
 
-function Modal() {
-    return (
-        <div className="modal">
-            <h4>제목</h4>
-            <p>날짜</p>
-            <p>상세내용</p>
-        </div>
-    )
-}
 
 export default App;
