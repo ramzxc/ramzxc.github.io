@@ -1,35 +1,36 @@
 import { Link } from 'react-router-dom';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './Sidebar.css';
 
 const Sidebar = () => {
     return (
         <div className='sidebar'>
 			 <div className='divider' id='search'>
-				<p>About me</p>
+				<p className='section'>about me</p>
 			 </div>
 			 <div className='contents'>
-				<ul>
+				<ul className='categories'>
 					<li><Link exact to='/'>Introduce Myself</Link></li>
 				</ul>
 			 </div>
 			 <div className='divider'>
-				<p>recent posts</p>
+				<p className='section'>recent posts</p>
 			 </div>
 			 <div className='contents'>
-				<ul>
+				<ul className='categories'>
+					<li><Link exact to='/programming/web'>깃허브 블로그 새로고침 문제 해결</Link></li>
+					<br></br>
 					<li><Link exact to='/programming/web'>생애 첫 블로그 만들기</Link></li>
 				</ul>
 			 </div>
 			 <div className='divider'>
-				<p>categories</p>
+				<p className='section'>categories</p>
 			 </div>
 			 <div className='contents'>
-				<ul>
+				<ul className='categories'>
 					<li>Problem Solving</li>
 					{/* <li><Link exact to='/ps'>Problem Solving</Link></li> */}
 					<br></br>
-					<ul>
+					<ul className='categories'>
 						<li><Link exact to='/ps/algorithms'>Algorithms</Link></li>
 						<br></br>
 						<li><Link exact to='/ps/BOJ'>BOJ</Link></li>
@@ -43,7 +44,7 @@ const Sidebar = () => {
 					<br></br>
 					<li>Programming</li>
 					{/* <li><Link exact to='/programming'>Programming</Link></li> */}
-					<ul>
+					<ul className='categories'>
 						<br></br>
 						<li><Link exact to='/programming/web'>Web</Link></li>
 						<br></br>
@@ -52,7 +53,7 @@ const Sidebar = () => {
 					<br></br>
 					<li>Games</li>
 					{/* <li><Link exact to='/games'>Games</Link></li> */}
-					<ul>
+					<ul className='categories'>
 						<br></br>
 						<li><Link exact to='/games/chess'>Chess</Link></li>
 						<br></br>
@@ -62,6 +63,10 @@ const Sidebar = () => {
 					</ul>
 				</ul>
 			 </div>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
         </div>
     )
 };

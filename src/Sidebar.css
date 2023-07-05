@@ -7,22 +7,24 @@
 
 .sidebar {
 	font-family: 'nav';
-	margin-right: 5%;
 	margin-left: auto;
 	width: 22%;
-	height: 1100px;
+	height: 1200px;
+	margin-right: 5%;
 }
 
 .divider {
-	border-bottom: 2px solid black;
+	/* border-right: 2px solid black;
+	border-left: 2px solid black; */
 	width: 100%;
 	float: right;
 	margin-top: 40%;
 	font-weight: bold;
-}
-
-#search {
-	margin-top: 40px;
+	padding-bottom: 15px;
+	padding-top: 5px;
+	padding-left: 0;
+	position: relative;
+	left: -2px;
 }
 
 .contents {
@@ -30,5 +32,17 @@
 	width: 100%;
 	float: right;
 	font-weight: lighter;
-	border-bottom: 2px solid black;
+	border-left: 2px solid rgb(179, 179, 179);
+	padding: 10px;
+	padding-top: 0;
+}
+
+.section {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 19px;
+}
+
+.categories {
+	padding-left: 30px;
 }

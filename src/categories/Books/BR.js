@@ -1,10 +1,9 @@
-
 import '../../Content.css';
 
-const Cybersecurity = () => {
+const BR = () => {
 	return (
 		<div className='content'>
-			<h2 className='category'>Cybersecurity</h2>
+			<h2 className='category'>Book Reviews</h2>
 			<br></br>
 			<p>No posts yet</p>
 			<br></br>
@@ -15,4 +14,4 @@ const Cybersecurity = () => {
 	)
 };
 
-export default Cybersecurity;
+export default BR;
