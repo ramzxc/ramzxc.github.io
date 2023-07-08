@@ -107,6 +107,10 @@ body {
 	bottom: 0.5px;
 }
 
+.nava {
+	display: block;
+}
+
 .nava:hover {
 	border-bottom: 0;
 }

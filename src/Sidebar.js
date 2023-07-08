@@ -17,9 +17,10 @@ const Sidebar = () => {
 			 </div>
 			 <div className='contents'>
 				<ul className='categories'>
-					<li><Link exact to='/programming/web'>깃허브 블로그 새로고침 문제 해결</Link></li>
+					{/* <li><Link exact to='/programming/web'>깃허브 블로그 새로고침 문제 해결</Link></li>
 					<br></br>
-					<li><Link exact to='/programming/web'>생애 첫 블로그 만들기</Link></li>
+					<li><Link exact to='/programming/web'>생애 첫 블로그 만들기</Link></li> */}
+					<li><Link exact to='/ps/boj'>2616번: 소형기관차</Link></li>
 				</ul>
 			 </div>
 			 <div className='divider'>

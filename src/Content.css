@@ -53,7 +53,7 @@ section {
 }
 
 .f {
-	border-top: 2px solid black;
+	border-top: 2px solid rgb(177, 177, 177);
 }
 
 .date {
@@ -64,4 +64,5 @@ section {
 
 a:hover {
 	border-bottom: 1px solid grey;
+	cursor: pointer;
 }
