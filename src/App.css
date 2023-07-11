@@ -54,7 +54,7 @@ body {
 	height: 59px;
 	text-align: center;
 	position: relative;
-	bottom: -1px;
+	bottom: 2px;
 	right: 6px;
 }
 
@@ -88,23 +88,23 @@ body {
 }
 
 .navItem {
-	display: block;
+	display: flex;
 	cursor: pointer;
-	padding: 5px;
-	padding-bottom: 0;
+	padding-top: 5px;
 	height: 50px;
-	width: 15%;
 	text-align: center;
 	position: relative;
 	bottom: 2px;
 	line-height: 50px;
 	z-index: 100;
+	align-items: center;
 }
 
 .navItem:hover {
 	border-bottom: 2px solid rgb(56, 56, 56);
 	position: relative;
 	bottom: 0.5px;
+	text-align: center;
 }
 
 .nava {

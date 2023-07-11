@@ -31,9 +31,9 @@ function App() {
 			</header>
 			<nav>
 				<ul className='nav'>
-					<li className='navItem'><a className='nava' href={boj}>BOJ</a></li>
-					<li className='navItem'><a className='nava' href={solved}>solved.ac</a></li>
-					<li className='navItem'><a className='nava' href={github}>Github</a></li>
+					<li className='navItem'><img src='/img/boj.png' style={{width: '30px', height: '30px'}}/><a className='nava' href={boj}>&nbsp;BOJ&nbsp;</a></li>
+					<li className='navItem'><img src='/img/ac.png' style={{width: '30px', height: '18px'}}/><a className='nava' href={solved}>&nbsp;solved.ac&nbsp;</a></li>
+					<li className='navItem'><img src='/img/github.png' style={{width: '30px'}}/><a className='nava' href={github}>&nbsp;Github&nbsp;</a></li>
 				</ul>
 			</nav>
 			<section>
