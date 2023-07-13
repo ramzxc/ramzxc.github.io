@@ -5,6 +5,17 @@ const BOJ = () => {
 		<div className='content'>
 			<h2 className='category'>BOJ</h2>
 			<br></br>
+
+			<h1 id='1915' className='title'>1915번: 가장 큰 정사각형</h1>
+			<a onClick={() => window.open("https://www.acmicpc.net/problem/1915")}>https://www.acmicpc.net/problem/1915</a>
+			<p>예전에 풀어봤던 문제였는지 보자마자 풀이를 떠올릴 수 있었다. 여담으로 질문 게시판 탭에 습관적으로 들어갔다가 '답 정사각형의 길이로 해서 틀리시는 분들'이라는 제목만 읽고 "설마 내가 저렇게 틀리겠어?" 했는데 진짜 그렇게 틀려서 웃겼다.</p>
+			<img src='/img/1915.png'/>
+			<p>밑에서 풀었던 문제들과는 그때그때마다 rmax로 최댓값을 찾아줘야한다는 것 말고는 크게 다른 점 없는 무난한 DP 문제인 것 같다.</p>
+			<p>rmax로 최댓값을 찾아야 하는 이유는 밑의 문제들과는 다르게 배열 전체가 '연속적'으로 고려되지 않고, 부분부분만 연속적으로 고려되기 때문이다.</p>
+			<p>배열을 돌며 우선 현재 위치의 배열이 값 1을 가지고 있는지 확인한 후 자신을 기준으로 대각선 왼쪽 한 칸 위, 왼쪽 한 칸 전, 위쪽으로 한 칸 전을 검사해 이미 만들어진 정사각형이 있는지 확인한다.</p>
+			<p>arr[i][j]에 저장되는 값은 정사각형의 길이로, 정사각형 자체가 또 다른 작은 정사각형들로 이루어져 있다는 점을 이용해 만약 검사한 위 세 개의 칸 중 최솟값에 현재 위치 arr[i][j]의 길이 1을 더해줌으로써 반드시 정사각형을 만들 수 있게 된다. </p>
+			<a className="date">Jul. 13th, 2023</a>
+			<br></br>
 			
 			<h1 id='11049' className='title'>11049번: 행렬 곱셈 순서</h1>
 			<a onClick={() => window.open("https://www.acmicpc.net/problem/11049")}>https://www.acmicpc.net/problem/11049</a>
@@ -13,6 +24,8 @@ const BOJ = () => {
 			<p>마찬가지로 동적계획법, DP를 이용해 문제들을 잘게 쪼갠 뒤 합치는 방법으로 풀 수 있으며 등장하는 s, e, k의 역할이 11066번과 완전히 동일히다.</p>
 			<p>시작지점 s, 끝지점 e와 행렬을 합칠 때는 무조건 두개씩 합친다는 점, 그리고 행렬이 결국 하나로 합쳐진다는 점을 이용해서 k번째에서 행렬이 둘로 나뉘어 합쳐질 때의 값을 저장해나간다.</p>
 			<p>작은 것부터 시작하기 때문에 합치는 행렬의 수가 2개일 때부터 3개, 4개, 결국 하나로 합쳐질 때까지 반복해준다. </p>
+			<a className="date">Jul. 11th, 2023</a>
+			<br></br>
 
 			<h1 id='11066' className='title'>11066번: 파일 합치기</h1>
 			<a onClick={() => window.open("https://www.acmicpc.net/problem/11066")}>https://www.acmicpc.net/problem/11066</a>
@@ -22,6 +35,8 @@ const BOJ = () => {
 			<p>그렇다면 주어진 파일들의 시작점과 끝점을 s, e로 잡고 배열 dp[s][e]는 시작점 s부터 e까지의 파일 크기로 정해 문제를 풀 수 있다.</p>
 			<p>지금 합치고자 하는 파일이 s부터 e까지라면, 그 파일들은 s부터 k까지, 또 k + 1부터 e까지 합친 파일들의 합으로 정의할 수 있다.</p>
 			<p>k값에 따라 파일의 크기가 달라지기 때문에 우리는 k값을 변화시켜가며 최솟값을 취하면 된다.</p>
+			<a className="date">Jul. 9th, 2023</a>
+			<br></br>
 			
 			<h1 id='2616' className='title'>2616번: 소형기관차</h1>
 			<a onClick={() => window.open("https://www.acmicpc.net/problem/2616")}>https://www.acmicpc.net/problem/2616</a>
@@ -30,6 +45,7 @@ const BOJ = () => {
 			<img src="/img/2616.png"/>
 			<p>DP를 통해 지금까지의 최댓값 (dp[i][j - 1]) 과 현재 위치를 선택해 계산한 값 (dp[i - 1][j - t] + s) 을 비교하여 더 큰 값을 dp[i][j]에 저장한다.</p>
 			<p>이렇게 되면 항상 현재 값은 현재까지의 계산 중 최댓값이 되며 그렇기에 가장 마지막 값이 모든 배열을 고려했을 때의 최댓값이 되게 된다.</p>
+			<a className="date">Jul. 8th, 2023</a>
 
 			<br></br>
 			<br></br>
