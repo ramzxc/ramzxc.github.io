@@ -17,11 +17,7 @@ const Sidebar = () => {
 			 </div>
 			 <div className='contents'>
 				<ul className='categories'>
-					<li><Link exact to='/ps/boj'>2169번: 로봇 조종하기</Link></li>
-					<br></br>
-					<li><Link exact to='/ps/boj'>1915번: 가장 큰 정사각형</Link></li>
-					<br></br>
-					<li><Link exact to='/ps/boj'>11049번: 행렬 곱셈 순서</Link></li>
+					<li><Link exact to='/ps/boj'>2011번: 암호코드</Link></li>
 				</ul>
 			 </div>
 			 <div className='divider'>
