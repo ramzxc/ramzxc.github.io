@@ -17,7 +17,7 @@ const Sidebar = () => {
 			 </div>
 			 <div className='contents'>
 				<ul className='categories'>
-					<li><Link exact to='/ps/boj'>2011번: 암호코드</Link></li>
+					<li><Link exact to='/ps/boj'>13392번: 방법을 출력하지 않는 숫자 맞추기</Link></li>
 				</ul>
 			 </div>
 			 <div className='divider'>
