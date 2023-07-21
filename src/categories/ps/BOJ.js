@@ -6,6 +6,16 @@ const BOJ = () => {
 			<h2 className='category'>BOJ</h2>
 			<br></br>
 
+			<h1 id='2494' className='title'>2494번: 숫자 맞추기</h1>
+			<a onClick={() => window.open("https://www.acmicpc.net/problem/2494")}>https://www.acmicpc.net/problem/2494</a>
+			<p>13392번: 방법을 출력하지 않는 숫자 맞추기를 토대로 값을 역추적할 수 있는 방법을 고민했다.</p>
+			<p>예전에 이런 식으로 역추적해서 답으로 출력하는 문제들을 풀었었는데, 그때의 감을 다 잃은 것 같다. 다시 열심히 풀며 익혀봐야겠다.</p>
+			<p>이번에도 <a onClick={() => window.open("https://nicotina04.tistory.com/86")}>한 블로그</a>를 참고했다.</p>
+			<img src='img/2494.png'/>
+			<p>그 전의 j값 (왼쪽으로 돌린 횟수) 을 저장하는 배열 back과 정답 ans일 때의 dp배열의 두번째 인덱스 값을 초기값으로 가진 변수 J를 이용했다.</p>
+			<p>J가 저장하는 값은 back[i][j]에서 j값인데, 이때 DP가 돌아가는 과정에서 왼쪽으로 돌렸을 때, 그러니까 j 위치에 대신 (j + l) % 10가 들어갈 때 말한대로 j의 값이 바뀌게 된다. 그래서 이를 이용해 왼쪽으로 돌렸는지 오른쪽으로 돌렸는지 판단이 가능한 것이다.</p>
+			<p>어차피 back에는 j값만 저장하고, DP 과정에서 dp 배열에 저장되는 값은 (i - 1, j)를 가지는 dp 배열 + 현재 값 a임이 고정되기 때문에 쉽게 역추적이 가능하게 된다.</p>
+
 			<h1 id='13392' className='title'>13392번: 방법을 출력하지 않는 숫자 맞추기</h1>
 			<a onClick={() => window.open("https://www.acmicpc.net/problem/13392")}>https://www.acmicpc.net/problem/13392</a>
 			<p><a onClick={() => window.open("https://www.acmicpc.net/problem/2494")}>2494번: 숫자 맞추기</a>를 풀어보려다가 감이 잡히지 않아 대신 풀게된 문제이다.</p>
