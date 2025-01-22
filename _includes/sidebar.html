@@ -25,36 +25,32 @@
           <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
         </a>
       </li>
-	  <li class="nav-item{% if page.layout == 'about' %}{{ " active" }}{% endif %}">
-        <a href="{{ '/about' | relative_url }}" class="nav-link">
-          <i class="fa-fw fas fa-info-circle"></i>
-          <span>{{ site.data.locales[include.lang].tabs.about | upcase }}</span>
-        </a>
-      </li>
+	  <!-- the real tabs -->
+      {% for tab in site.tabs %}
+        <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
+          <a href="{{ tab.url | relative_url }}" class="nav-link">
+            <i class="fa-fw {{ tab.icon }}"></i>
+            {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
+
+            <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      {% endfor %}
+	  </ul>
+	  <ul class="nav">
+	  <!-- the real tabs -->
+      {% for category in site.categories %}
+        <li class="nav-item{% if category.link == page.url %}{{ " active" }}{% endif %}">
+          <a href="{{ category.link | relative_url }}" class="nav-link">
+            {% capture category_name %}{{ category.link | split: '/' }}{% endcapture %}
+			{% if category.second == true %}<span>ㄴ</span>{% endif %}
+            <span>{{ site.data.locales[include.lang].categories.[category_name] | default: category.title | upcase }}</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+      {% endfor %}
 	</ul>
-	<ul class="nav-categories">
-	  <li class="nav-item{% if page.url == '/categories/ps/' %}{{" active"}}{% endif %}"> 
-	  	<a href="/categories/ps" class="nav-link"> PS </a> 
-	  </li>
-	  <li class="nav-item{% if page.url == '/categories/boj/' %}{{" active"}}{% endif %}"> 
-	  	<a href="/categories/boj" class="nav-link"> ㄴ BOJ </a> 
-	  </li>
-	  <li class="nav-item{% if page.url == '/categories/codeforces/' %}{{" active"}}{% endif %}"> 
-	  	<a href="/categories/codeforces" class="nav-link"> ㄴ Codeforces </a> 
-	  </li>
-	  <li class="nav-item{% if page.url == '/categories/dev/' %}{{" active"}}{% endif %}"> 
-	    <a href="/categories/dev" class="nav-link"> DEV </a> 
-	  </li>
-	  <li class="nav-item{% if page.url == '/categories/security/' %}{{" active"}}{% endif %}"> 
-	    <a href="/categories/security" class="nav-link"> SECURITY </a> 
-	  </li>
-	  <li class="nav-item{% if page.url == '/categories/activities/' %}{{" active"}}{% endif %}"> 
-	    <a href="/categories/activities" class="nav-link"> ACTIVITIES </a> 
-	  </li>
-	  <li class="nav-item{% if page.url == '/categories/aloha/' %}{{" active"}}{% endif %}"> 
-	    <a href="/categories/aloha" class="nav-link"> ㄴ ALOHA </a> 
-	  </li>
-    </ul>
   </nav>
 
   <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
