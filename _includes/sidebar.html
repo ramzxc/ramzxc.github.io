@@ -27,6 +27,7 @@
       </li>
 	  <!-- the real tabs -->
       {% for tab in site.tabs %}
+	  	{% if tab.visible != false %}
         <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
           <a href="{{ tab.url | relative_url }}" class="nav-link">
             <i class="fa-fw {{ tab.icon }}"></i>
@@ -36,11 +37,12 @@
           </a>
         </li>
         <!-- .nav-item -->
+		{% endif %}
       {% endfor %}
 	  </ul>
 	  <ul class="nav">
 	  <!-- the real tabs -->
-      {% for category in site.categories %}
+      {% for category in site.side-categories %}
         <li class="nav-item{% if category.link == page.url %}{{ " active" }}{% endif %}">
           <a href="{{ category.link | relative_url }}" class="nav-link">
             {% capture category_name %}{{ category.link | split: '/' }}{% endcapture %}
