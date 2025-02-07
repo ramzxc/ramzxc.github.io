@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jekyll을 이용한 Github Pages에서 포스트 작성하는 법
+title: Jekyll로 포스트 작성하는 법
 date: 2025-02-08 06:06 +0900
 description: Jekyll 형식으로 포스트 작성하고 Github Pages에 올리는 법까지
 authors: [ramzxc]
