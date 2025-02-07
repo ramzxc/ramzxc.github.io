@@ -1,5 +1,5 @@
 ---
 layout: category
 order: 1
-link: /categories/ps/
+# link: /categories/ps/
 ---

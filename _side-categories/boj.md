@@ -1,6 +1,6 @@
 ---
 layout: category
 order: 2
-link: /categories/boj/
+# link: /categories/boj/
 second: true
 ---

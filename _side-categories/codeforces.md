@@ -1,6 +1,6 @@
 ---
 layout: category
 order: 3
-link: /categories/codeforces/
+# link: /categories/codeforces/
 second: true
 ---
