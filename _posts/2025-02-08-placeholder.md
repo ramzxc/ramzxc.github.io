@@ -4,7 +4,7 @@ title: placeholder
 date: 2025-02-08 06:47 +0900
 description: this post is nothing
 authors: [ramzxc]
-categories: [ps, boj, codeforces, security, activities]
+categories: [dev, ps, boj, codeforces, security, activities]
 tags: blog 
 ---
 

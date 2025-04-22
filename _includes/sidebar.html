@@ -42,9 +42,23 @@
 	  </ul>
 	  <ul class="nav">
 	  <!-- the real tabs -->
+	  {% for tab in site.tabs %}
+	  	{% if tab.order == 1 %}
+        <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
+          <a href="{{ tab.url | relative_url }}" class="nav-link">
+            <i class="fa-fw {{ tab.icon }}"></i>
+            {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
+
+            <span>{{ site.data.locales[include.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
+          </a>
+        </li>
+        <!-- .nav-item -->
+		{% endif %}
+      {% endfor %}
       {% for category in site.side-categories %}
         <li class="nav-item{% if category.link == page.url %}{{ " active" }}{% endif %}">
           <a href="{{ category.link | relative_url }}" class="nav-link">
+		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             {% capture category_name %}{{ category.link | split: '/' }}{% endcapture %}
 			{% if category.second == true %}<span>ㄴ</span>{% endif %}
             <span>{{ site.data.locales[include.lang].categories.[category_name] | default: category.title | upcase }}</span>
