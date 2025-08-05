@@ -4,7 +4,7 @@ title: Jekyll로 포스트 작성하는 법
 date: 2025-02-08 06:06 +0900
 description: Jekyll 형식으로 포스트 작성하고 Github Pages에 올리는 법까지
 authors: [ramzxc]
-categories: [dev]
+categories: [dev, etc]
 tags: blog 
 ---
 
@@ -40,7 +40,7 @@ tags: blog
 
 글이 제대로 올라갔는지 확인하거나 미리 보고싶을 때 블로그를 로컬에서 실행해볼 수 있다. 
 
-ruby 설치, jekyll 설치, Github Pages 생성 등 미리 준비해야 하는 것들이 모두 되어있다고 가정할 때, `<handle>.github.io` 폴더에서 터미널을 실행하여 명령어 `bundle exec jekyll serve`를 입력하면 된다.
+ruby 설치, jekyll 설치, bundle 설치, Github Pages 생성 등 미리 준비해야 하는 것들이 모두 되어있다고 가정할 때, `<handle>.github.io` 폴더에서 터미널을 실행하여 명령어 `bundle exec jekyll serve`를 입력하면 된다.
 
 ## 업로드하기
 

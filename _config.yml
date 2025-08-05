@@ -14,9 +14,9 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Dev's Archive # the main title
+title: 윤아람 # the main title
 
-tagline: 아카이버의 기록 # it will display as the subtitle
+tagline: 작업 기록지 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   dev blog
